@@ -1,10 +1,16 @@
 import './App.css'
+import { Header } from './components/header';
+import { Footer } from "./components/footer";
+import MainRoutes from './routers/MainRoutes';
 
 function App() {
 
   return (
-    <div>
-    </div>
+    <main>
+      <Header/>
+      <MainRoutes/>
+      <Footer/>
+    </main>
   )
 }
 
