@@ -5,8 +5,10 @@ export const Container = styled.div`
   min-height: 100vh;
 `;
 export const SectionSlide = styled.div`
-    background-color: #000;
-    height: 60vh;
+    width: 100vw;
+    height: 516px;
+    background: url('/src/assets/backgrounds/image1.png') center;
+    background-size: contain;
 `;
 export const SectionProduct = styled.div`
   max-width: 1400px;

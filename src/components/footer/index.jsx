@@ -9,9 +9,11 @@ export const Footer = () => {
             <C.Content>
                 <C.Social>
                     <img src={SigaDevs} alt="" />
-                    <FaInstagram size={45} color="#fff"/>
-                    <FaTwitter size={45} color="#fff"/>
-                    <FaFacebookF size={45} color="#fff"/>
+                    <div>
+                        <FaInstagram size={40} color="#000"/>
+                        <FaFacebookF size={35} color="#000"/>
+                        <FaTwitter size={40} color="#000"/>
+                    </div>
                 </C.Social>
             </C.Content>
         </C.Footer>
