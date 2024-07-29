@@ -1,0 +1,13 @@
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    height: 450px; /* Ajuste a altura conforme necessário */
+}
+.swiper-pagination-bullet{
+    background-color: #CCC;
+    margin-bottom: 15px !important;
+}
