@@ -7,7 +7,14 @@ const Home = () => {
       <C.SectionSlide>
         <Carousel/>
       </C.SectionSlide>
-      <C.SectionProduct>produto</C.SectionProduct>
+      <C.SectionProduct>
+        <C.Title>EM OFERTA</C.Title>
+        <C.Cards>
+          <C.Card>Card</C.Card>
+          <C.Card>Card</C.Card>
+          <C.Card>Card</C.Card>
+        </C.Cards>
+      </C.SectionProduct>
     </C.Container>
   );
 };

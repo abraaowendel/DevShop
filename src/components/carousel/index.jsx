@@ -7,11 +7,13 @@ import 'swiper/css/pagination';
 import './style.css'
 
 const Carousel = () => {
+
   const images = [
-    "/src/assets/backgrounds/image1.png",
-    "/src/assets/backgrounds/image1.png",
-    "/src/assets/backgrounds/image1.png"
+    "/src/assets/backgrounds/banner-01.png",
+    "/src/assets/backgrounds/banner-02.png",
+    "/src/assets/backgrounds/banner-03.png"
   ]
+
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
@@ -21,8 +23,8 @@ const Carousel = () => {
       autoplay={{ delay: 3000 }} // Slide automático a cada 3 segundos
       loop // Permite o loop infinito
     >
-      <SwiperSlide style={{ backgroundImage: `url(${images[2]})`}}></SwiperSlide>
-      <SwiperSlide style={{ backgroundImage: `url(${images[2]})` }}></SwiperSlide>
+      <SwiperSlide style={{ backgroundImage: `url(${images[0]})`}}></SwiperSlide>
+      <SwiperSlide style={{ backgroundImage: `url(${images[1]})` }}></SwiperSlide>
       <SwiperSlide style={{ backgroundImage: `url(${images[2]})` }}></SwiperSlide>
     </Swiper>
   );

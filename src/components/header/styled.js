@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Account = styled.div`
   max-width: 1200px;
   margin: auto;
-  padding-top: 15px;
+  padding: 10px 10px 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -48,6 +48,7 @@ export const Search = styled.div`
 export const Sides = styled.div`
   max-width: 1200px;
   margin: auto;
+  padding: 0 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;

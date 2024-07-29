@@ -61,16 +61,16 @@ export const Header = () => {
         <C.RightSide>
      
           <ul>
-            <a href="/produtos/categoria/camisas">
+            <a href="/camisas">
               <li>CAMISAS</li>
             </a>
-            <a href="/produtos/categoria/moletons">
+            <a href="/moletons">
               <li>MOLETONS</li>
             </a>
-            <a href="/produtos/categoria/bermudas">
+            <a href="/bermudas">
               <li>BERMUDAS</li>
             </a>
-            <a href="/produtos/categoria/calcas">
+            <a href="/calcas">
               <li>CALÇAS</li>
             </a>
             {condition &&
