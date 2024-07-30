@@ -1,10 +1,11 @@
 import * as C from "./styled";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/icons/Logo.svg";
 import { IoPerson } from "react-icons/io5";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { useState } from "react";
 
 export const Header = () => {
+
   const [inputValue, setInputValue] = useState("");
   const [isExpanded, setIsExpanded] = useState(false); 
   const [condition, setCondition] = useState(false);
@@ -51,7 +52,7 @@ export const Header = () => {
             }}
           />
         </C.Search>
-        <IoPerson fontSize={22} style={{ margin: " 0 20px 0 10px" }} />
+        <IoPerson fontSize={22} style={{ margin: " 0 20px 0 10px" }} onClick={() => window.location.href = "/login"}/>
         <FaShoppingCart fontSize={22} />
       </C.Account>
       <C.Sides>

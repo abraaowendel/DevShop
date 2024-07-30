@@ -5,27 +5,48 @@ export const Container = styled.div`
   min-height: 100vh;
 `;
 export const SectionSlide = styled.div`
-    width: 100vw;
-    height: 516px;
-    background-size: contain;
+  width: 100vw;
+  background-size: contain;
 `;
 export const SectionProduct = styled.div`
   max-width: 1200px;
   margin: auto;
-  padding: 0 10px;
+  padding: 80px 10px;
 `;
 export const Title = styled.h1`
- text-align: center;
- font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1.3px;
 `;
 export const Cards = styled.div`
-  margin-top: 20px;
   display: flex;
   justify-content: space-around;
   gap: 10px;
 `;
 export const Card = styled.div`
-  border: 1px solid #000;
-  width: 100%;
-  height: 250px;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+  }
+  h3 {
+    padding-top: 5px;
+    font-weight: 300;
+  }
+  h3,
+  p,span{
+    font-family: "Inter", sans-serif;
+    text-align: start;
+  }
+  p{
+    font-weight: bold;
+  }
+  p span{
+    font-size: 14px;
+    font-weight: 300;
+    color: #898989;
+    text-decoration: line-through;
+    }
 `;
