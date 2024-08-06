@@ -1,11 +1,25 @@
 import Carousel from "../../components/carousel";
 import * as C from "./styled";
 
+import ScrollReveal from 'scrollreveal';
+
 import i1 from "../../assets/tshirts/t-shirt-01.png"
 import i2 from "../../assets/tshirts/t-shirt-02.png"
 import i3 from "../../assets/tshirts/t-shirt-03.png"
+import { useEffect } from "react";
 
 const Home = () => {
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: '50px',
+      duration: 1200,
+      reset: true
+    });
+
+    sr.reveal('.fade-in', { delay: 200 });
+    sr.reveal('.fade-up', { origin: 'bottom' });
+  }, []);
   return (
     <C.Container>
       <C.SectionSlide>
@@ -13,7 +27,7 @@ const Home = () => {
       </C.SectionSlide>
       <C.SectionProduct>
         <C.Title>PRODUTOS EM OFERTA</C.Title>
-        <C.Cards>
+        <C.Cards className="fade-in">
           <C.Card>
             <img src={i1} alt="" />
             <h3>T-Shirt Basic - Branca</h3>

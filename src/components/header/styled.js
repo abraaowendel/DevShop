@@ -25,6 +25,14 @@ export const Account = styled.div`
   svg {
     cursor: pointer;
   }
+  @media (max-width: 992px) {
+    svg {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
+  }
 `;
 export const Search = styled.div`
   display: flex;
@@ -44,8 +52,12 @@ export const Search = styled.div`
       text-align: center;
     }
   }
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 export const Sides = styled.div`
+  position: relative;
   max-width: 1200px;
   margin: auto;
   padding: 0 10px;
@@ -58,10 +70,18 @@ export const LeftSide = styled.div`
   display: flex;
   align-items: center;
 `;
+export const HeaderLogin = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+`;
 export const RightSide = styled.div`
+ 
   ul {
     text-decoration: none;
     display: flex;
+    align-items: center;
     a {
       color: #555;
       cursor: pointer;
@@ -74,9 +94,26 @@ export const RightSide = styled.div`
         color: #000;
       }
     }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 15px;
+      right: 10px;
+    }
+    @media (max-width: 992px) {
+      ul,li{
+        display: none;
+      }
+      .menu {
+        display: flex;
+      }
+    }
   }
 `;
 export const Logo = styled.img`
   cursor: pointer;
+  @media (max-width: 992px) {
+      height: 60px;
+  }
 `;
 export const Menu = styled.div``;

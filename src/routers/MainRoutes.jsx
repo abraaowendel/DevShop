@@ -3,6 +3,7 @@ import NotFound from "../pages/NotFound";
 import Inicio from "../pages/Home";
 import UnderDevelopment from "../pages/UnderDevelopment";
 import Login from "../pages/Login";
+import Registrar from "../pages/Register";
 
 const MainRoutes = () => {
     return (
@@ -10,6 +11,7 @@ const MainRoutes = () => {
             <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Inicio/>} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Registrar />} />
             <Route path="/camisas" element={<UnderDevelopment />} />
             <Route path="/camisas" element={<UnderDevelopment />} />
             <Route path="/camisas" element={<UnderDevelopment />} />
