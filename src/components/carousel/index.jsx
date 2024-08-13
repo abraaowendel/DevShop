@@ -9,9 +9,9 @@ import './style.css'
 const Carousel = () => {
 
   const images = [
-    "/src/assets/backgrounds/banner-01.png",
-    "/src/assets/backgrounds/banner-02.png",
-    "/src/assets/backgrounds/banner-03.png"
+    "./src/assets/backgrounds/banner-01.png",
+    "./src/assets/backgrounds/banner-02.png",
+    "./src/assets/backgrounds/banner-03.png"
   ]
 
   return (
