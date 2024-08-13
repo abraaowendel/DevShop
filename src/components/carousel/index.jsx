@@ -6,12 +6,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './style.css'
 
+import i1 from "../../assets/backgrounds/banner-01.png"
+import i2 from "../../assets/backgrounds/banner-02.png"
+import i3 from "../../assets/backgrounds/banner-03.png"
+
+
+
 const Carousel = () => {
 
   const images = [
-    "./src/assets/backgrounds/banner-01.png",
-    "./src/assets/backgrounds/banner-02.png",
-    "./src/assets/backgrounds/banner-03.png"
+    i1,i2,i3
   ]
 
   return (
