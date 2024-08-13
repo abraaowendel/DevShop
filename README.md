@@ -1,4 +1,4 @@
-## cDevs - A Moda dos Coders
+## Devs - A Moda dos Coders
 No Devs, entendemos que a programação não é só uma profissão; é um estilo de vida. Por isso, criamos uma coleção de roupas pensada especialmente para você que vive o mundo do código.
 
 👕 Camisas: Estilo e conforto para você enfrentar longas sessões de debug com confiança e atitude.
