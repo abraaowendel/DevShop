@@ -3,20 +3,20 @@ import Logo from "../../assets/icons/Logo.svg";
 import { IoPerson } from "react-icons/io5";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { TbMenu2 } from "react-icons/tb";
+import { MdClose } from "react-icons/md";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export const Header = () => {
-
   const [inputValue, setInputValue] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
-  const [condition, setCondition] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [condition2, setCondition2] = useState(false);
 
   const location = useLocation().pathname;
 
   const handleSearchClick = () => {
-    setIsExpanded(true); 
+    setIsExpanded(true);
   };
 
   const handleBlur = (event) => {
@@ -30,27 +30,27 @@ export const Header = () => {
     setIsExpanded(true);
   };
 
+  const handleMenu = () => {
+    document.querySelector("ul").classList.toggle("active");
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       {location == "/login" && (
         <C.HeaderLogin>
-          <C.Logo
-            src={Logo}
-            alt="Logo escrito Devs"
-          />
+          <C.Logo src={Logo} alt="Logo escrito Devs" />
         </C.HeaderLogin>
-      )}   
+      )}
       {location == "/signup" && (
         <C.HeaderLogin>
-          <C.Logo
-            src={Logo}
-            alt="Logo escrito Devs"
-          />
+          <C.Logo src={Logo} alt="Logo escrito Devs" />
         </C.HeaderLogin>
       )}
       {location !== "/signup" && location !== "/login" && (
         <C.Header>
-          <C.Container>
+          <C.Container style={{position: isOpen? "fixed":"static"}}
+          >
             <p>FRETE FIXO R$ 9.99 PARA TODO BRASIL</p>
           </C.Container>
           <C.Account>
@@ -87,6 +87,7 @@ export const Header = () => {
                 src={Logo}
                 alt="Logo escrito Devs"
                 onClick={() => (window.location.href = "/")}
+                style={{position: isOpen? "fixed":"static"}}
               />
             </C.LeftSide>
             <C.RightSide>
@@ -101,9 +102,24 @@ export const Header = () => {
                   <li>BERMUDAS</li>
                 </a>
 
-                <TbMenu2 className="menu" fontSize={30} onClick={() => null} />
+                {!isOpen && (
+                  <TbMenu2
+                    className="menu"
+                    fontSize={55}
+                    color="#000"
+                    onClick={handleMenu}
+                  />
+                )}
+                {isOpen && (
+                  <MdClose
+                    className="menu"
+                    fontSize={55}
+                    color="#000"
+                    onClick={handleMenu}
+                  />
+                )}
 
-                {condition && (
+                {condition2 && (
                   <>
                     <a href="">
                       <li>Minha Conta</li>

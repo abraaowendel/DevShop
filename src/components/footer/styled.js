@@ -33,10 +33,8 @@ export const SocialIcons = styled.div`
 `;
 export const Info = styled.div`
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    padding-bottom: 15px;
-   max-width: 900px;
-   margin: auto;
 `
 
 export const PaymentsMethods = styled.div`
