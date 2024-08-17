@@ -17,11 +17,20 @@ export const Title = styled.h1`
   text-align: center;
   font-family: "Inter", sans-serif;
   letter-spacing: 1.3px;
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 export const Cards = styled.div`
   display: flex;
   justify-content: space-around;
   gap: 10px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 export const Card = styled.div`
   cursor: pointer;
@@ -45,9 +54,19 @@ export const Card = styled.div`
     font-weight: bold;
   }
   p span {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
     color: #898989;
     text-decoration: line-through;
+  }
+  @media (max-width: 768px) {
+    h3,
+    p,
+    span {
+      text-align: center;
+    }
+    img {
+      height: 350px;
+    }
   }
 `;
