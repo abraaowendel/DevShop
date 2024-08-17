@@ -17,6 +17,9 @@ export const Container = styled.div`
     color: #fff;
     letter-spacing: 1.5px;
   }
+  @media (max-width: 992px) {
+    font-size: 13px;
+  }
 `;
 export const Account = styled.div`
   max-width: 1200px;
@@ -70,6 +73,7 @@ export const Sides = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 992px) {
+    padding: 15px 30px;
   }
 `;
 export const LeftSide = styled.div`
@@ -106,7 +110,7 @@ export const RightSide = styled.div`
     .menu {
       display: none;
       position: absolute;
-      top: 25px;
+      top: 21px;
       right: 25px;
       z-index: 99;
     }
@@ -114,7 +118,6 @@ export const RightSide = styled.div`
     @media (max-width: 992px) {
       transition: all .2s ease-in;
       right: -50vw;
-
       a{      
         display: none;
       }
@@ -146,17 +149,19 @@ export const RightSide = styled.div`
           padding: 40px 60px;
         }
       }
-   
     }
   }
 `;
 export const Logo = styled.img`
   cursor: pointer;
   z-index: 99;
-  top: 63px;
+  top: 61px;
   @media (max-width: 992px) {
      position: absolute;
      height: 60px;
+  }
+  @media (max-width: 590px) {
+     height: 50px;
   }
 `;
 export const Menu = styled.div``;
