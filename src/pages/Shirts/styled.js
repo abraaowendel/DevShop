@@ -1,5 +1,13 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
+export const pulse = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100%{ 
+    opacity: 1;
+  }
+`;
 export const Container = styled.div`
   min-height: 100vh;
   max-width: 992px;
@@ -26,5 +34,16 @@ export const Filter = styled.div`
       font-size: 16px;
       cursor: pointer;
     }
+  }
+`
+export const Painel = styled.div`
+  background-color: #000;
+  padding: 30px;
+  margin-bottom: 30px;
+  h1{
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: ${pulse} 2s infinite;
   }
 `

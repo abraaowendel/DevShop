@@ -19,12 +19,12 @@ export const Card = styled.div`
   margin-bottom: 40px;
   img {
     width: 250px;
-    height: 250px;
+    height: 230px;
     object-fit: contain;
     object-position: center;
   }
   h3 {
-    padding-top: 5px;
+    padding-top: 15px;
     font-weight: 300;
   }
   h3,

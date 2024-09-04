@@ -8,27 +8,20 @@ const Shirts = () => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=9")
+    fetch("https://fakestoreapi.com/products/category/men's clothing")
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, []);
 
-  useEffect(() => {
-    const sr = ScrollReveal({
-      distance: "50px",
-      duration: 1200,
-      reset: true,
-    });
-
-    sr.reveal(".fade-in", { delay: 800 });
-    sr.reveal(".fade-up", { origin: "bottom" });
-  }, []);
 
   return (
     <C.Container>
       {!products && <Loading />}
       {products && (
         <>
+          <C.Painel>
+            <h1>OFERTAS</h1>
+          </C.Painel>
           <C.Filter>
             <span>ORDERNAR POR:</span>
             <select name="" id="">
