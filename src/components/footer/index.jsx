@@ -27,7 +27,7 @@ export const Footer = () => {
             <h3>CERTIFICAÇÕES</h3>
             <div>
               <img src={SeloGoogle} alt="Selo do Google" />
-              <img src={SeloClearSale} alt="Selo ClearSale" />
+              <img src={SeloClearSale} alt="Selo ClearSale" />  
             </div>
           </C.Certifications>
         </C.Info>

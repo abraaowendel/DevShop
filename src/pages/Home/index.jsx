@@ -3,7 +3,7 @@ import * as C from "./styled";
 
 import ScrollReveal from 'scrollreveal';
 
-  import i1 from "../../assets/tshirts/t-shirt-01.png"
+import i1 from "../../assets/tshirts/t-shirt-01.png"
 import i2 from "../../assets/tshirts/t-shirt-02.png"
 import i3 from "../../assets/tshirts/t-shirt-03.png"
 import { useEffect } from "react";

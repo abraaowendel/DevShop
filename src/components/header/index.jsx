@@ -37,7 +37,7 @@ export const Header = () => {
 
   return (
     <>
-      {location == "/login" && (
+ {/*      {location == "/login" && (
         <C.HeaderLogin>
           <C.Logo src={Logo} alt="Logo escrito Devs" />
         </C.HeaderLogin>
@@ -46,7 +46,7 @@ export const Header = () => {
         <C.HeaderLogin>
           <C.Logo src={Logo} alt="Logo escrito Devs" />
         </C.HeaderLogin>
-      )}
+      )} */}
       {location !== "/signup" && location !== "/login" && (
         <C.Header>
           <C.Container style={{position: isOpen? "fixed":"static"}}
