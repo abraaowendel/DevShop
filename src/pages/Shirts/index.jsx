@@ -5,10 +5,11 @@ import * as C from "./styled";
 import ScrollReveal from "scrollreveal";
 
 const Shirts = () => {
+
   const [products, setProducts] = useState();
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/category/men's clothing")
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, []);
@@ -25,7 +26,8 @@ const Shirts = () => {
           <C.Filter>
             <span>ORDERNAR POR:</span>
             <select name="" id="">
-              <option value="">Nome</option>
+              <option value="">Ordem alfabética, A-Z</option>
+              <option value="">Ordem alfabética, Z-A</option>
               <option value="">Maior preço</option>
               <option value="">Menor preço</option>
             </select>

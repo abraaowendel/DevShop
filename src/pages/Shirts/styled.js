@@ -1,11 +1,8 @@
 import styled, {keyframes} from "styled-components";
 
 export const pulse = keyframes`
-  0% {
+  to{
     opacity: 0;
-  }
-  100%{ 
-    opacity: 1;
   }
 `;
 export const Container = styled.div`
