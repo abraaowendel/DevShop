@@ -54,9 +54,11 @@ export const Card = styled.div`
     z-index: 2;
     background-color: #FF0000;
     padding: 5px;
-    max-width: 145px;
+    border-radius: 2px;
+    max-width: 128px;
+    height: 24px;
     width: 100%;
-    font-size: 13px;
+    font-size: 11px;
     margin-bottom: -2px;
     color: #fff;
     letter-spacing: 1.2px;

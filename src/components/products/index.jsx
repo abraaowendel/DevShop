@@ -7,6 +7,7 @@ export const Products = ({ props }) => {
         props.map((item, key) => (
           <C.Card key={key}>
             {item.discount != 0 && <div>ECONOMIZE {item.discount}%</div>}
+            {item.discount === 0 && <div style={{backgroundColor: "transparent"}}></div>}
             <img src={item.image} alt="" />
             <h3>{item.name}</h3>
             <p>

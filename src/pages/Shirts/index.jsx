@@ -17,21 +17,21 @@ const Shirts = () => {
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/102113470/3bb53679ba.jpg",
-        discount: 5,
+        discount: 0,
     },
     {
       name: "Camiseta Manga Longa Listrada",
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/287626094/camisa-errado-mais-t--funcionando-insevx46lo.jpg",
-        discount: 14,
+        discount: 0,
       },
     {
       name: "Camiseta Oversized Branca",
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/221152188/camisa-tech-support-definition-preta-3a35729c.png",
-        discount: 20,
+        discount: 0,
       },
     {
       name: "Camiseta com Logo Minimalista",
@@ -45,7 +45,7 @@ const Shirts = () => {
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/102460820/c2d44fc0fe.jpg",
-        discount: 20,
+        discount: 0,
 
       },
     {
