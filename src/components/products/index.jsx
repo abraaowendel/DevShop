@@ -6,10 +6,33 @@ export const Products = ({ props }) => {
       {props &&
         props.map((item, key) => (
           <C.Card key={key}>
-              <img src={item.image} alt="" />
-              <h3>{item.name}</h3>
-              <p><span>R$ {(item.price * 20  / 100 + item.price).toFixed(2)}</span> R$ {(item.price).toFixed(2)}</p>
-              <p>ou 6 x R$ {(item.price / 6).toFixed(2)}</p>
+            {item.discount != 0 && <div>ECONOMIZE {item.discount}%</div>}
+            <img src={item.image} alt="" />
+            <h3>{item.name}</h3>
+            <p>
+              {item.price.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+              <span>
+                {item.discount !== 0 &&
+                  (item.price / (1 - item.discount / 100)).toLocaleString(
+                    "pt-BR",
+                    {
+                      style: "currency",
+                      currency: "BRL",
+                    }
+                  )
+                }
+              </span>
+            </p>
+            <p className="p-black">
+              3 x{" "}
+              {(item.price / 3).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </p>
           </C.Card>
         ))}
     </C.Cards>

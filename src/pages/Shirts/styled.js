@@ -37,6 +37,8 @@ export const Painel = styled.div`
   background-color: #000;
   padding: 30px;
   margin-bottom: 30px;
+  border-radius: 10px;
+
   h1{
     font-size: 80px;
     color: #fff;
