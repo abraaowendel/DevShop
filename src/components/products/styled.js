@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
 `
@@ -12,13 +13,13 @@ export const Cards = styled.div`
     gap: 20px;
   }
 `;
-export const Card = styled.div`
-  cursor: pointer;
-  margin-bottom: 40px;
-  min-width: 33.3%;
+export const Card = styled.div`  
   display: flex;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 40px;
+  min-width: 33.3%;
   img {
     height: 230px;
     object-fit: contain;
@@ -56,7 +57,8 @@ export const Card = styled.div`
     padding: 5px;
     border-radius: 2px;
     max-width: 128px;
-    height: 24px;
+    height: 24px !important;
+    user-select: none;
     width: 100%;
     font-size: 11px;
     margin-bottom: -2px;
@@ -65,6 +67,16 @@ export const Card = styled.div`
     font-family: "Inter";
     font-weight: bold;
   }
+  a{
+    display: block;
+    height: 100%;
+  }
+  &:hover{
+    img{
+      opacity: .9;
+    }
+  }
+
   @media (max-width: 768px) {
     h3,
     p,

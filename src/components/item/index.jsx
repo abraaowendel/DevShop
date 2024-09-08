@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-import { Loading } from "../../components/loading";
-import { Products } from "../../components/products";
+import { useParams } from "react-router-dom";
 import * as C from "./styled";
 
-const Shirts = () => {
+export const Item = () => {
+  const { id } = useParams();
+  const  idProduto  = parseInt(id);
+
+  const [item, setItem] = useState([]);
+
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -30,8 +34,8 @@ const Shirts = () => {
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/287626094/camisa-errado-mais-t--funcionando-insevx46lo.jpg",
-        discount: 0,
-      },
+      discount: 0,
+    },
     {
       id: 4,
       name: "Camiseta Oversized Branca",
@@ -39,8 +43,8 @@ const Shirts = () => {
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/221152188/camisa-tech-support-definition-preta-3a35729c.png",
-        discount: 0,
-      },
+      discount: 0,
+    },
     {
       id: 5,
       name: "Camiseta com Logo Minimalista",
@@ -48,8 +52,8 @@ const Shirts = () => {
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/130221950/ac8fe9f499.jpg",
-        discount: 20,
-      },
+      discount: 20,
+    },
     {
       id: 6,
       name: "Camiseta Regata Fitness",
@@ -57,9 +61,8 @@ const Shirts = () => {
       price: 100,
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/102460820/c2d44fc0fe.jpg",
-        discount: 0,
-
-      },
+      discount: 0,
+    },
     {
       id: 7,
       name: "Camiseta Polo Algodão Egípcio",
@@ -68,7 +71,7 @@ const Shirts = () => {
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/153700878/02ad351fb7.jpg",
       discount: 20,
-      },
+    },
     {
       id: 8,
       name: "Camiseta Tie-Dye Colorida",
@@ -77,49 +80,45 @@ const Shirts = () => {
       image:
         "https://cdn.awsli.com.br/600x450/608/608801/produto/242028720/camisa-php-tmdmqims7k.png",
       discount: 20,
-      },
+    },
   ]);
-  const [sortOrder, setSortOrder] = useState("desc");
-
-  /* useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=6")
-      .then((res) => res.json())
-      .then((json) => setProducts(json));
-  }, []);
- */
-
 
   useEffect(() => {
-    const sortedProducts = [...products].sort((a, b) => {
-      return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
+    products.find((i) => {
+      if (idProduto === i.id) {
+        setItem(i)
+      }
     });
-    setProducts(sortedProducts);
-  }, [sortOrder]);
-
+  }, []);
 
   return (
     <C.Container>
-      {!products && <Loading />}
-      {products && (
-        <>
-          <C.Painel>
-            <h1>OFERTAS</h1>
-          </C.Painel>
-          <C.Filter>
-            <span>ORDERNAR POR:</span>
-            <select
-              value={sortOrder}
-              onChange={(e) => setSortOrder(e.target.value)}
-            >
-              <option value="desc">Maior preço</option>
-              <option value="asc">Menor preço</option>
-            </select>
-          </C.Filter>
-          <Products props={products} />
-        </>
+      {item && (
+        <C.Sides>
+          <C.SideLeft>
+            <img src={item.image} alt="" />
+          </C.SideLeft>
+          <C.SideRight>
+            <h1>{item.name}</h1>
+            <p>{item.desc}</p>
+            <h3>R$ {item.price}</h3>
+            3 x{" "}
+              {(item.price / 3).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            <ul>
+               <li>P</li> 
+               <li>M</li> 
+               <li>G</li> 
+               <li>GG</li> 
+            </ul>
+            <button>Adicionar ao Carrinho</button>
+          </C.SideRight>
+        </C.Sides>
       )}
     </C.Container>
   );
 };
 
-export default Shirts;
+export default Item;

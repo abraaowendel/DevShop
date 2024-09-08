@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import * as C from "./styled";
 
 export const Products = ({ props }) => {
@@ -7,7 +8,10 @@ export const Products = ({ props }) => {
         props.map((item, key) => (
           <C.Card key={key}>
             {item.discount != 0 && <div>ECONOMIZE {item.discount}%</div>}
-            {item.discount === 0 && <div style={{backgroundColor: "transparent"}}></div>}
+            {item.discount === 0 && (
+              <div style={{ backgroundColor: "transparent" }}>ECONOMIZE</div>
+            )}
+
             <img src={item.image} alt="" />
             <h3>{item.name}</h3>
             <p>
@@ -23,8 +27,7 @@ export const Products = ({ props }) => {
                       style: "currency",
                       currency: "BRL",
                     }
-                  )
-                }
+                  )}
               </span>
             </p>
             <p className="p-black">
@@ -34,6 +37,22 @@ export const Products = ({ props }) => {
                 currency: "BRL",
               })}
             </p>
+            <Link
+              to={`/camisas/${item.id}`}
+              style={{
+                textAlign: "center",
+                padding: "10px 5px",
+                color: "#fff",
+                width: "130px",
+                margin: "10px auto",
+                backgroundColor: "#222",
+                borderRadius: "3px",
+                fontFamily: "Inter",
+                fontSize: "14px"
+              }}
+            >
+              COMPRE AQUI
+            </Link>
           </C.Card>
         ))}
     </C.Cards>
