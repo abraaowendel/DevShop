@@ -9,13 +9,13 @@ export const Container = styled.div`
   min-height: 100vh;
   max-width: 992px;
   margin: auto;
-  padding: 80px 0;
+  padding: 30px 0 80px;
 `;
 export const Filter = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   span{
     letter-spacing: 1.1px;
     font-size: 14px;

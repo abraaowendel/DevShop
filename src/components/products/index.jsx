@@ -6,7 +6,7 @@ export const Products = ({ props }) => {
     <C.Cards className="fade-in">
       {props &&
         props.map((item, key) => (
-          <C.Card key={key}>
+          <C.LinkStyled to={`/camisas/${item.id}`} key={key}>
             {item.discount != 0 && <div>ECONOMIZE {item.discount}%</div>}
             {item.discount === 0 && (
               <div style={{ backgroundColor: "transparent" }}>ECONOMIZE</div>
@@ -37,23 +37,7 @@ export const Products = ({ props }) => {
                 currency: "BRL",
               })}
             </p>
-            <Link
-              to={`/camisas/${item.id}`}
-              style={{
-                textAlign: "center",
-                padding: "10px 5px",
-                color: "#fff",
-                width: "130px",
-                margin: "10px auto",
-                backgroundColor: "#222",
-                borderRadius: "3px",
-                fontFamily: "Inter",
-                fontSize: "14px"
-              }}
-            >
-              COMPRE AQUI
-            </Link>
-          </C.Card>
+          </C.LinkStyled>
         ))}
     </C.Cards>
   );

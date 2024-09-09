@@ -14,6 +14,9 @@ export const Cards = styled.div`
   }
 `;
 export const Card = styled.div`  
+  
+`;
+export const LinkStyled = styled(Link)`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -28,6 +31,7 @@ export const Card = styled.div`
   h3 {
     padding-top: 15px;
     font-weight: 300;
+    color: #000;
   }
   h3,
   p,
@@ -66,10 +70,6 @@ export const Card = styled.div`
     letter-spacing: 1.2px;
     font-family: "Inter";
     font-weight: bold;
-  }
-  a{
-    display: block;
-    height: 100%;
   }
   &:hover{
     img{

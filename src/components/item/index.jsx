@@ -1,12 +1,16 @@
+import * as C from "./styled";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import * as C from "./styled";
+import { Loading } from "../loading";
+import { CgMathPlus,CgMathMinus  } from "react-icons/cg";
 
 export const Item = () => {
   const { id } = useParams();
-  const  idProduto  = parseInt(id);
+  const idProduto = parseInt(id);
 
   const [item, setItem] = useState([]);
+  const [selectedSize, setSelectedSize] = useState("P");
+  const [count, setCount] = useState(1);
 
   const [products, setProducts] = useState([
     {
@@ -86,13 +90,14 @@ export const Item = () => {
   useEffect(() => {
     products.find((i) => {
       if (idProduto === i.id) {
-        setItem(i)
+        setItem(i);
       }
     });
   }, []);
 
   return (
     <C.Container>
+      {!item && <Loading />}
       {item && (
         <C.Sides>
           <C.SideLeft>
@@ -102,18 +107,45 @@ export const Item = () => {
             <h1>{item.name}</h1>
             <p>{item.desc}</p>
             <h3>R$ {item.price}</h3>
-            3 x{" "}
+            <p>
+              {" "}
+              3 x{" "}
               {(item.price / 3).toLocaleString("pt-BR", {
                 style: "currency",
                 currency: "BRL",
               })}
-            <ul>
-               <li>P</li> 
-               <li>M</li> 
-               <li>G</li> 
-               <li>GG</li> 
-            </ul>
-            <button>Adicionar ao Carrinho</button>
+            </p>
+            <h4>Tamanho: {selectedSize}</h4>
+            <div className="btns">
+              {["P", "M", "G", "GG"].map((size) => (
+                <button
+                  key={size}
+                  onClick={() => {
+                    setSelectedSize(size)
+                    setCount(1)
+                  }}
+                  className={size === selectedSize ? "size active" : "size"}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+            <h4>Quantidade:</h4>
+            <div className="btnCount">
+              <button
+                onClick={() => {
+                  count > 1 ? setCount(count - 1) : "";
+                }}
+              >
+                <CgMathMinus color="#000"/>
+              </button>
+              <span>{count}</span>
+              <button onClick={() => setCount(count + 1)}>
+                <CgMathPlus color="#000"/>
+              </button>
+            </div>
+
+            <button className="btnAddCart">Adicionar ao Carrinho</button>
           </C.SideRight>
         </C.Sides>
       )}
