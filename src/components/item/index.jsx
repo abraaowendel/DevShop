@@ -88,11 +88,13 @@ export const Item = () => {
   ]);
 
   useEffect(() => {
-    products.find((i) => {
+   let req = products.find((i) => {
       if (idProduto === i.id) {
         setItem(i);
+        return i;
       }
     });
+    req == undefined ? window.location.href = "/404": ""
   }, []);
 
   return (
@@ -149,6 +151,7 @@ export const Item = () => {
           </C.SideRight>
         </C.Sides>
       )}
+      {}
     </C.Container>
   );
 };

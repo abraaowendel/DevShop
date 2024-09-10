@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-height: calc(100vh - 300px);
-  max-width: 992px;
+  max-width: 1000px;
+  width: 100%;
   margin: auto;
-  font-family: "Inter";
+  min-height: calc(100vh - 300px);
+  font-family: "Inter", "Arial";
 `;
 
 export const Sides = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 export const SideLeft = styled.div`
-  width: 60%;
+  width: 55%;
   img {
     height: 400px;
   }
