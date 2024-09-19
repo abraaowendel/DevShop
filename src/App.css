@@ -12,11 +12,3 @@ main{
  display: flex;
  flex-direction: column;
 }
-::-webkit-scrollbar {
-  background-color: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  border-color: #000;
-}

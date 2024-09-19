@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Loading } from "../loading";
 import { CgMathPlus,CgMathMinus  } from "react-icons/cg";
 
+
 export const Item = () => {
   const { id } = useParams();
   const idProduto = parseInt(id);
@@ -103,12 +104,15 @@ export const Item = () => {
       {item && (
         <C.Sides>
           <C.SideLeft>
-            <img src={item.image} alt="" />
+            <img src={item.image} alt={item.name} />
           </C.SideLeft>
           <C.SideRight>
             <h1>{item.name}</h1>
             <p>{item.desc}</p>
-            <h3>R$ {item.price}</h3>
+            <h3>{(item.price + 0).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}</h3>
             <p>
               {" "}
               3 x{" "}
@@ -117,6 +121,16 @@ export const Item = () => {
                 currency: "BRL",
               })}
             </p>
+            <div className="reviews">    
+              <ul className="rating">
+                <li className="star">★</li>
+                <li className="star">★</li>
+                <li className="star">★</li>
+                <li className="star">★</li>
+                <li className="star">★</li>
+              </ul>
+              <p>Sem Avaliações</p> {/* MUDAR ISSO QUANDO TIVER API */}
+            </div>
             <h4>Tamanho: {selectedSize}</h4>
             <div className="btns">
               {["P", "M", "G", "GG"].map((size) => (
@@ -132,6 +146,7 @@ export const Item = () => {
                 </button>
               ))}
             </div>
+            <p className="quantityAvailable">Apenas {} 5 unidades disponíveis</p>
             <h4>Quantidade:</h4>
             <div className="btnCount">
               <button
@@ -146,7 +161,6 @@ export const Item = () => {
                 <CgMathPlus color="#000"/>
               </button>
             </div>
-
             <button className="btnAddCart">Adicionar ao Carrinho</button>
           </C.SideRight>
         </C.Sides>

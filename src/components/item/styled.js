@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin: auto;
   min-height: calc(100vh - 300px);
   font-family: "Inter", "Arial";
+  padding-bottom: 80px;
 `;
 
 export const Sides = styled.div`
@@ -21,25 +22,58 @@ export const SideLeft = styled.div`
 export const SideRight = styled.div`
   h1 {
     font-size: 30px;
-    color: #000;
+    color: #282828;
     text-transform: uppercase;
   }
   h3 {
-    font-size: 26px;
+    font-size: 24px;
+    color: #ff0000;
+    padding: 5px 0 3px;
   }
-  h4{
-    margin: 20px 0 10px;
+  p {
+    font-size: 15px;
   }
-  .btns{
+  h4 {
+    margin: 15px 0 10px;
+  }
+  .reviews{
+    display: flex;
+    align-items: center;
+    padding: 5px 0 15px;
+    border-bottom: 1px solid #ccc;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      li {
+        font-size: 20px;
+        color: #F5D5A3;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+    p{
+      margin: 0 5px -3px;
+      line-height: 27px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  .quantityAvailable{
+    color: #ff0000;
+    font-weight: bold;
+    letter-spacing: 1.01px;
+  }
+  .btns {
     margin-bottom: 20px;
   }
-  .size{
-    background-color: #F5F5F5;
+  .size {
+    background-color: #f5f5f5;
     color: #000;
     border: 1px solid #ccc;
     margin-right: 10px;
   }
-  .size.active{
+  .size.active {
     border-color: #000;
   }
   button {
@@ -50,10 +84,10 @@ export const SideRight = styled.div`
     border-color: transparent;
     cursor: pointer;
     &:hover {
-      opacity: .9;
+      opacity: 0.9;
     }
   }
-  .btnCount{
+  .btnCount {
     border: 1px solid #ccc;
     max-width: 160px;
     margin-bottom: 25px;
@@ -62,14 +96,14 @@ export const SideRight = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    button{
+    button {
       background-color: transparent;
       color: #000;
       font-size: 20px;
     }
   }
-  .btnAddCart{
+  .btnAddCart {
     width: 100%;
-    background-color: #2E9E7B;
+    background-color: #2e9e7b;
   }
 `;

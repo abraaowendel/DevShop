@@ -4,6 +4,7 @@ import { Products } from "../../components/products";
 import * as C from "./styled";
 
 const Shirts = () => {
+  
   const [products, setProducts] = useState([
     {
       id: 1,

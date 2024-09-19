@@ -30,8 +30,11 @@ const Registrar = () => {
           required
         />
         <C.Button type="submit">Entrar</C.Button>
+        <C.LinkText>
+          Já tem uma conta? <Link to="/login">Criar uma conta</Link>
+        </C.LinkText>
       </C.Form>
-    </C.Container>  
+    </C.Container>
   );
 };
 
