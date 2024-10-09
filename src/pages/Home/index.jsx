@@ -1,4 +1,4 @@
-import Carousel from "../../components/carousel";
+import Carrousel from "../../components/carrousel";
 import * as C from "./styled";
 
 import ScrollReveal from 'scrollreveal';
@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <C.Container>
       <C.SectionSlide>
-        <Carousel/>
+        <Carrousel/>
       </C.SectionSlide>
       <C.SectionProduct>
         <C.Title>PRODUTOS EM OFERTA</C.Title>

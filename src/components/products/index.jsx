@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import * as C from "./styled";
 
-export const Products = ({ props }) => {
+export const Products = ({ props, url }) => {
   return (
     <C.Cards className="fade-in">
       {props &&
         props.map((item, key) => (
-          <C.LinkStyled to={`/camisas/${item.id}`} key={key}>
+          <C.LinkStyled to={`/${url}/${item.id}`} key={key}>
             {item.discount != 0 && <div>ECONOMIZE {item.discount}%</div>}
             {item.discount === 0 && (
               <div style={{ backgroundColor: "transparent" }}>ECONOMIZE</div>
             )}
-
             <img src={item.image} alt="" />
             <h3>{item.name}</h3>
             <p>

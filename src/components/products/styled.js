@@ -6,10 +6,12 @@ export const Container = styled.div`
 export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 820px) {
+    justify-content: center;
+  }
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 20px;
   }
 `;
@@ -84,7 +86,17 @@ export const LinkStyled = styled(Link)`
       text-align: center;
     }
     img {
-      height: 350px;
+      height: 280px;
+    }
+  }
+  @media (max-width: 590px) {
+    h3,
+    p,
+    span {
+      font-size: 1em;
+    }
+    img{
+      height: 220px;
     }
   }
 `;

@@ -37,7 +37,7 @@ export const Header = () => {
 
   return (
     <>
- {/*      {location == "/login" && (
+     {/*  {location == "/login" && (
         <C.HeaderLogin>
           <C.Logo src={Logo} alt="Logo escrito Devs" />
         </C.HeaderLogin>

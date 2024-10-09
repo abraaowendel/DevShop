@@ -12,7 +12,7 @@ import i3 from "../../assets/backgrounds/banner-03.png"
 
 
 
-const Carousel = () => {
+const Carrousel = () => {
 
   const images = [
     i1,i2,i3
@@ -34,4 +34,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Carrousel;

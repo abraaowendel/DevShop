@@ -86,6 +86,7 @@ export const HeaderLogin = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #ccc;
+  padding: 10px 30px 0;
 `;
 export const RightSide = styled.div`
  
@@ -137,17 +138,17 @@ export const RightSide = styled.div`
         min-height: 100vh;
         overflow: hidden;
         background-color: #fff;
-        display: flex; /* Certifique-se de que o menu é exibido como flex */
+        display: flex; 
         .menu{
           top: 60px;
         }
-        /* Estilos para o conteúdo do menu */
         a {
           display: block;
           color: #000;
-          font-size: 25px;
+          font-size: 20px;
           padding: 40px 60px;
         }
+        
       }
     }
   }

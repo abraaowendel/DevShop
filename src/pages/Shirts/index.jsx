@@ -102,7 +102,7 @@ const Shirts = () => {
     <C.Container>
       {!products && <Loading />}
       {products && (
-        <>
+        <C.Context>
           <C.Painel>
             <h1>OFERTAS</h1>
           </C.Painel>
@@ -116,8 +116,8 @@ const Shirts = () => {
               <option value="asc">Menor preço</option>
             </select>
           </C.Filter>
-          <Products props={products} />
-        </>
+          <Products props={products} url="camisas" />
+        </C.Context>
       )}
     </C.Container>
   );
