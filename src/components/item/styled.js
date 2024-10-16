@@ -12,11 +12,28 @@ export const Container = styled.div`
 export const Sides = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 export const SideLeft = styled.div`
   width: 55%;
   img {
     height: 400px;
+  }
+  @media (max-width: 768px) {
+    width: auto;
+    padding: 0 20px;
+    img {
+      height: 350px;
+    }
+  }
+  @media (max-width: 590px) {
+    img {
+      height: 250px;
+    }
   }
 `;
 export const SideRight = styled.div`
@@ -36,7 +53,7 @@ export const SideRight = styled.div`
   h4 {
     margin: 15px 0 10px;
   }
-  .reviews{
+  .reviews {
     display: flex;
     align-items: center;
     padding: 5px 0 15px;
@@ -47,19 +64,19 @@ export const SideRight = styled.div`
       flex-direction: row;
       li {
         font-size: 20px;
-        color: #F5D5A3;
+        color: #f5d5a3;
         cursor: pointer;
         user-select: none;
       }
     }
-    p{
+    p {
       margin: 0 5px -3px;
       line-height: 27px;
       font-weight: 600;
       font-size: 14px;
     }
   }
-  .quantityAvailable{
+  .quantityAvailable {
     color: #ff0000;
     font-weight: bold;
     letter-spacing: 1.01px;
@@ -105,5 +122,23 @@ export const SideRight = styled.div`
   .btnAddCart {
     width: 100%;
     background-color: #2e9e7b;
+  }
+  @media (max-width: 590px) {
+    padding: 0 20px;
+    h1 {
+      font-size: 26px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    h4 {
+    }
+    .btns {
+      display: flex;
+      justify-content:center;
+    }
   }
 `;
