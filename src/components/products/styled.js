@@ -6,7 +6,8 @@ export const Container = styled.div`
 export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 820px) {
+  padding: 0 30px;
+  @media (max-width: 882px) {
     justify-content: center;
   }
   @media (max-width: 768px) {

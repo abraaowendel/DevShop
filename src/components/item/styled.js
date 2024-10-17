@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const Sides = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 10px 30px;
   @media (max-width: 768px) {
     align-items: center;
     justify-content: center;
@@ -82,13 +83,14 @@ export const SideRight = styled.div`
     letter-spacing: 1.01px;
   }
   .btns {
+    display: flex;
     margin-bottom: 20px;
+    gap: 10px;
   }
   .size {
     background-color: #f5f5f5;
     color: #000;
     border: 1px solid #ccc;
-    margin-right: 10px;
   }
   .size.active {
     border-color: #000;
@@ -134,11 +136,8 @@ export const SideRight = styled.div`
     p {
       font-size: 14px;
     }
-    h4 {
+    .size{
     }
-    .btns {
-      display: flex;
-      justify-content:center;
-    }
+   
   }
 `;
