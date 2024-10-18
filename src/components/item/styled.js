@@ -7,13 +7,20 @@ export const Container = styled.div`
   min-height: calc(100vh - 300px);
   font-family: "Inter", "Arial";
   padding-bottom: 80px;
+  @media (max-width: 768px) {
+    padding-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 40px;
+  }
 `;
 
 export const Sides = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10px 30px;
+  padding: 10px 30px 0;
   @media (max-width: 768px) {
+    padding: 30px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -136,8 +143,5 @@ export const SideRight = styled.div`
     p {
       font-size: 14px;
     }
-    .size{
-    }
-   
   }
 `;

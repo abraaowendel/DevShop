@@ -16,11 +16,11 @@ const MainRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Registrar />} />
       <Route path="/camisas" element={<Shirts />} />
-      <Route path="/moletons" element={<UnderDevelopment />} />
+      <Route path="/moletons" element={<Hoodies />} />
       <Route path="/bermudas" element={<UnderDevelopment />} />
       <Route path="/camisas/:id" element={<Item />} />
-      <Route path="/moletons/:id" element={<UnderDevelopment />} />
-      <Route path="/bermudas/:id" element={<UnderDevelopment />} />
+      <Route path="/moletons/:id" element={<Item />} />
+      <Route path="/bermudas/:id" element={<Item />} />
     </Routes>
   );
 };
