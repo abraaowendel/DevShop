@@ -20,6 +20,7 @@ const Home = () => {
     sr.reveal('.fade-in', { delay: 200 });
     sr.reveal('.fade-up', { origin: 'bottom' });
   }, []);
+  
   return (
     <C.Container>
       <C.SectionSlide>

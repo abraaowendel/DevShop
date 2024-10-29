@@ -7,7 +7,7 @@ export const rotate = keyframes`
 `;
 export const Loader = styled.div`
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   width: 50px;
   aspect-ratio: 1;

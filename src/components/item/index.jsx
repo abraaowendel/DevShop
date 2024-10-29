@@ -5,6 +5,7 @@ import { Loading } from "../loading";
 import { CgMathPlus, CgMathMinus } from "react-icons/cg";
 
 export const Item = () => {
+  
   const { id } = useParams();
   const idProduto = parseInt(id);
 

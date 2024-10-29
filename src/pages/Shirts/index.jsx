@@ -106,7 +106,7 @@ const Shirts = () => {
 
   return (
     <C.Container>
-      {!products && <Loading />}
+      {products.length == 0 && <Loading />}
       {products && (
         <C.Context>
           <C.Painel>

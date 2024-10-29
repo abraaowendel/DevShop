@@ -4,7 +4,7 @@ import * as C from "./styled";
 import { Products } from "../../components/products";
 
 const Hoodies = () => {
-  const [produtos, setProdutos] = useState([
+  const [products, setProducts] = useState([
     {
       id: 1,
       name: "Moletom Dev Frontend Preto",
@@ -90,16 +90,16 @@ const Hoodies = () => {
 
   const [sortOrder, setSortOrder] = useState("desc");
   useEffect(() => {
-    const sortedProducts = [...produtos].sort((a, b) => {
+    const sortedProducts = [...products].sort((a, b) => {
       return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
     });
-    setProdutos(sortedProducts);
+    setProducts(sortedProducts);
   }, [sortOrder]);
 
   return (
     <C.Container>
-      {!produtos && <Loading />}
-      {produtos && (
+      {products.length == 0 && <Loading />}
+      {products && (
         <C.Context>
           <C.Painel>
             <h1>OFERTAS</h1>
@@ -114,9 +114,9 @@ const Hoodies = () => {
               <option value="asc">Menor preço</option>
             </select>
           </C.Filter>
-          <Products props={produtos} url="moletons" />
+          <Products props={products} url="moletons" />
         </C.Context>
-      )}
+      )}  
     </C.Container>
   );
 };
