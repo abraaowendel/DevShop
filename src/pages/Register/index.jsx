@@ -1,6 +1,6 @@
+import * as C from "./styled";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import * as C from "./styled";
 import { FaUser } from "react-icons/fa";
 import { GiPadlock } from "react-icons/gi";
 
@@ -18,7 +18,9 @@ const Registrar = () => {
       <C.Form onSubmit={handleSubmit}>
         <h1>Registrar</h1>
         <div>
-          <FaUser/>
+          <span>
+            <FaUser fontSize={23} color="#fff"/>
+          </span>
           <C.Input
             type="email"
             placeholder="E-mail"
@@ -28,7 +30,9 @@ const Registrar = () => {
           />
         </div>
         <div>
-          <GiPadlock />
+          <span>
+            <GiPadlock fontSize={23} color="#fff"/>
+          </span>
           <C.Input
             type="password"
             placeholder="Senha"
@@ -37,7 +41,7 @@ const Registrar = () => {
             required
           />
         </div>
-        <C.Button type="submit">Entrar</C.Button>
+        <C.Button type="submit">Criar uma conta</C.Button>
         <C.LinkText>
           Já tem uma conta? <Link to="/login">Entrar</Link>
         </C.LinkText>

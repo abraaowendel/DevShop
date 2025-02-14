@@ -42,6 +42,9 @@ const Login = () => {
             required
           />
         </div>
+        <C.LinkText style={{textAlign: "end", color: "#000"}}>
+          <Link to="/forgot">Esqueceu sua senha?</Link>
+        </C.LinkText>
         <C.Button type="submit">Entrar</C.Button>
         <C.LinkText>
             Não tem uma conta? <Link to="/signup">Criar uma conta</Link>

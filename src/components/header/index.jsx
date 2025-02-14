@@ -98,9 +98,9 @@ export const Header = () => {
                 <a href="/moletons">
                   <li>MOLETONS</li>
                 </a>
-                <a href="/bermudas">
+                {/* <a href="/bermudas">
                   <li>BERMUDAS</li>
-                </a>
+                </a> */}
 
                 {!isOpen && (
                   <TbMenu2

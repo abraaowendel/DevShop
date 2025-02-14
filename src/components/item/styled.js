@@ -6,12 +6,10 @@ export const Container = styled.div`
   margin: auto;
   min-height: calc(100vh - 300px);
   font-family: "Inter", "Arial";
-  padding-bottom: 80px;
+  padding:60px 0 80px;
+
   @media (max-width: 768px) {
-    padding-bottom: 60px;
-  }
-  @media (max-width: 768px) {
-    padding-bottom: 40px;
+    padding:10px 0 40px;
   }
 `;
 
@@ -30,6 +28,7 @@ export const SideLeft = styled.div`
   width: 55%;
   img {
     height: 400px;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     width: auto;

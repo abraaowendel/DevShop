@@ -22,6 +22,7 @@ const MainRoutes = () => {
       <Route path="/camisas/:id" element={<Item />} />
       <Route path="/moletons/:id" element={<Item />} />
       <Route path="/bermudas/:id" element={<Item />} />
+      <Route path="/ofertas/:id" element={<Item />} />
     </Routes>
   );
 };

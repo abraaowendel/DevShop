@@ -15,7 +15,7 @@ export const Form = styled.form`
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
-  border: 1px solid #ddd;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   div{
     display: flex;
     align-items: center;
@@ -34,9 +34,6 @@ export const Form = styled.form`
       top: 0;
       bottom: 0;
       left: 0;
-      padding: 0 10px;
-      border-radius: 10px 0 0 10px;
-      border-right: 1px solid #ddd;
       background-color: #ccc;
     }
     .icon{

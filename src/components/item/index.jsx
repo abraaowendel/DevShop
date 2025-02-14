@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Loading } from "../loading";
 import { CgMathPlus, CgMathMinus } from "react-icons/cg";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
+import i1 from "../../assets/tshirts/t-shirt-01.png"
+import i2 from "../../assets/tshirts/t-shirt-02.png"
+import i3 from "../../assets/tshirts/t-shirt-03.png"
 
 export const Item = () => {
   
@@ -190,6 +196,34 @@ export const Item = () => {
     if(url.includes("bermudas")){
       return;
     }
+    if(url.includes("ofertas")){
+      json = [
+        {
+          id: 1,
+          name: "T-Shirt Basic - Branca",
+          desc: "",
+          price: 150.00,
+          image: `${i1}`,
+          discount: "",
+        },  {
+          id: 2,
+          name: "T-Shirt Basic - Cinza",
+          desc: "",
+          price: 120.00,
+          image: `${i2}`,
+          discount: "",
+        },
+        {
+          id: 3,
+          name: "T-Shirt Basic - Vermelha",
+          desc: "",
+          price: 120.00,
+          image: `${i3}`,
+          discount: "",
+        },
+      ]
+
+    }
     setProducts(json);
     carregarProduto(json);
   }, []);
@@ -210,7 +244,12 @@ export const Item = () => {
       {item && (
         <C.Sides>
           <C.SideLeft>
-            <img src={item.image} alt={item.name} />
+            <Zoom>
+              <img 
+                src={item.image} 
+                alt={item.name} 
+                />
+            </Zoom>
           </C.SideLeft>
           <C.SideRight>
             <h1>{item.name}</h1>
