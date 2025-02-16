@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export const Header = () => {
+  
   const [inputValue, setInputValue] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ export const Header = () => {
         <C.Header>
           <C.Container style={{position: isOpen? "fixed":"static"}}
           >
-            <p>FRETE FIXO R$ 9.99 PARA TODO BRASIL</p>
+            <p>FRETE GRÁTIS PARA TODO BRASIL</p>
           </C.Container>
           <C.Account>
             <C.Search className={isExpanded ? "active" : ""}>
@@ -77,7 +78,7 @@ export const Header = () => {
             <IoPerson
               fontSize={22}
               style={{ margin: " 0 20px 0 10px" }}
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (window.location.href = "/account/profile")}
             />
             <FaShoppingCart fontSize={22} />
           </C.Account>

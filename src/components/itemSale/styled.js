@@ -1,26 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Container = styled.div`
-`
-export const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 30px;
-  @media (max-width: 882px) {
-    justify-content: center;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-`;
-export const Card = styled.div`  
-  
-`;
-export const Products = styled(Link)`
-  display: flex;
+export const ProductLink = styled(Link)`
+ display: flex;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
@@ -100,4 +82,4 @@ export const Products = styled(Link)`
       height: 220px;
     }
   }
-`;
+`

@@ -15,14 +15,20 @@ export const Form = styled.form`
   border-radius: 8px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
+  h1{
+    margin-bottom: 20px;
+  }
+  label{
+    font-size: 13px;
+  }
   div{
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
     padding: 25px 10px;
-    margin: 10px 0;
+    margin: 5px 0 8px;
     border: 1px solid #ddd;
     span{
       display: flex;
@@ -36,13 +42,20 @@ export const Form = styled.form`
       left: 0;
       background-color: #ccc;
     }
-    .icon{
-    }
+   
+  }
+  @media (max-width: 430px) {
+    box-shadow: none;
+  }
+  @media (max-width: 378px) {
+    h1{
+      font-size: 25px;
+    } 
   }
 `;
 
 export const Input = styled.input`
-border: 0;
+  border: 0;
   outline: none;
   position: absolute;
   top: 0;

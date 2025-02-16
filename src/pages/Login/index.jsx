@@ -18,32 +18,33 @@ const Login = () => {
     <C.Container>
       <C.Form onSubmit={handleSubmit}>
         <h1>Entrar</h1>
+        <label htmlFor="">E-MAIL</label>
         <div>
           <span>
             <FaUser className="icon" fontSize={23} color="#fff"/>
           </span>
           <C.Input
             type="email"
-            placeholder="E-mail"
+            placeholder="ex.: seunome@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
+        <label htmlFor="">SENHA</label>
         <div>
           <span>
             <GiPadlock className="icon" fontSize={23} color="#fff"/>
           </span>
           <C.Input
             type="password"
-            placeholder="Senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
         <C.LinkText style={{textAlign: "end", color: "#000"}}>
-          <Link to="/forgot">Esqueceu sua senha?</Link>
+          <Link to="/reset">Esqueceu sua senha?</Link>
         </C.LinkText>
         <C.Button type="submit">Entrar</C.Button>
         <C.LinkText>

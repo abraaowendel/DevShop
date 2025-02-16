@@ -3,10 +3,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { GiPadlock } from "react-icons/gi";
+import { MdEmail } from "react-icons/md";
 
-const Registrar = () => {
+const Register = () => {
+
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordRepeat, setRepeatPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,28 +20,58 @@ const Registrar = () => {
   return (
     <C.Container>
       <C.Form onSubmit={handleSubmit}>
-        <h1>Registrar</h1>
+        <h1>Cadastrar nova conta</h1>
+        <label htmlFor="">NOME COMPLETO</label>
         <div>
           <span>
             <FaUser fontSize={23} color="#fff"/>
           </span>
           <C.Input
+            type="text"
+            placeholder="ex.: Maria Luiza"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            required
+          />
+        </div>
+        <label htmlFor="">E-MAIL</label>
+        <div>
+          <span>
+            <MdEmail fontSize={23} color="#fff"/>
+          </span>
+          <C.Input
             type="email"
-            placeholder="E-mail"
+            placeholder="ex.: seunome@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
+        <label>
+          SENHA
+        </label>
         <div>
           <span>
             <GiPadlock fontSize={23} color="#fff"/>
           </span>
           <C.Input
             type="password"
-            placeholder="Senha"
+            placeholder=""
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+          <label htmlFor="">CONFIRMAR SENHA</label>
+        <div>
+          <span>
+            <GiPadlock fontSize={23} color="#fff"/>
+          </span>
+          <C.Input
+            type="password"
+            placeholder=""
+            value={passwordRepeat}
+            onChange={(e) => setRepeatPassword(e.target.value)}
             required
           />
         </div>
@@ -50,4 +84,4 @@ const Registrar = () => {
   );
 };
 
-export default Registrar;
+export default Register;

@@ -6,12 +6,25 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./style.css";
 
-import i1 from "../../assets/backgrounds/banner-01.png";
-import i2 from "../../assets/backgrounds/banner-02.png";
+
 
 const Carrousel = () => {
-  const images = [i1, i2];
-
+  
+  //AQUI SERÁ CHAMADA UMA REQUISACAO PARA TRAZER OS BANNERS
+  const images = [{
+    src: "https://i.imgur.com/OFVLlql.png", 
+    alt: "Vem ai novidades!"
+  },{
+    src: "https://i.imgur.com/p2QXbDD.png", 
+    alt: "Frete gratis"
+  },{
+    src: "https://i.imgur.com/gHaj2Y7.png", 
+    alt: "Até 50% off" 
+  },{
+    src: "https://i.imgur.com/TyKXOsf.png", 
+    alt: "Moda Masculina"
+  }];
+  
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
@@ -21,8 +34,11 @@ const Carrousel = () => {
       autoplay={{ delay: 3000 }} // Slide automático a cada 3 segundos
       loop // Permite o loop infinito
     >
-      <SwiperSlide style={{ backgroundImage: `url(${images[0]})` }} />
-      <SwiperSlide style={{ backgroundImage: `url(${images[1]})` }} />
+      {    
+        images.map((item, key) => (
+          <SwiperSlide key={key} style={{ backgroundImage: `url(${item.src})` }} alt={item.alt} />
+        ))
+      }
     </Swiper>
   );
 };

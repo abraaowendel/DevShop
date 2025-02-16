@@ -1,42 +1,12 @@
-import { Link } from "react-router-dom";
 import * as C from "./styled";
+import { ItemSale } from "../itemSale";
 
 export const Products = ({ props, url }) => {
   return (
     <C.Cards className="fade-in">
-      {props &&
-        props.map((item, key) => (
-          <C.LinkStyled to={`/${url}/${item.id}`} key={key}>
-            {item.discount != 0 && <div>ECONOMIZE {item.discount}%</div>}
-            {item.discount === 0 && (
-              <div style={{ backgroundColor: "transparent" }}>ECONOMIZE</div>
-            )}
-            <img src={item.image} alt="" />
-            <h3>{item.name}</h3>
-            <p>
-              {item.price.toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              })}
-              <span>
-                {item.discount !== 0 &&
-                  (item.price / (1 - item.discount / 100)).toLocaleString(
-                    "pt-BR",
-                    {
-                      style: "currency",
-                      currency: "BRL",
-                    }
-                  )}
-              </span>
-            </p>
-            <p className="p-black">
-              3 x{" "}
-              {(item.price / 3).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </p>
-          </C.LinkStyled>
+        {props &&
+          props.map((item, key) => (
+            <ItemSale key={key} props={{item, url}}/>
         ))}
     </C.Cards>
   );

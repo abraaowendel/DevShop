@@ -6,12 +6,10 @@ import { CgMathPlus, CgMathMinus } from "react-icons/cg";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-import i1 from "../../assets/tshirts/t-shirt-01.png"
-import i2 from "../../assets/tshirts/t-shirt-02.png"
-import i3 from "../../assets/tshirts/t-shirt-03.png"
 
-export const Item = () => {
-  
+
+export const Item = ({data}) => {
+  console.log(data)
   const { id } = useParams();
   const idProduto = parseInt(id);
 
@@ -27,82 +25,82 @@ export const Item = () => {
       json = [
         {
           id: 1,
-          name: "Camiseta Backend Preta",
+          productName: "Camiseta Backend Preta",
           desc: "",
           price: 59.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/237795018/camisa-back-end-pride-preta-02354e44-geqc1055zu.png",
           discount: 10,
         },
         {
           id: 2,
-          name: "Camiseta !False Preta",
+          productName: "Camiseta !False Preta",
           desc: "",
           price: 59.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/102113470/3bb53679ba.jpg",
           discount: 10,
         },
         {
           id: 13,
-          name: "Camiseta Piada Dev Preta",
+          productName: "Camiseta Piada Dev Preta",
           desc: "",
           price: 59.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/287626094/camisa-errado-mais-t--funcionando-insevx46lo.jpg",
           discount: 10,
         },
         {
           id: 4,
-          name: "Camiseta Tech Suport Preta",
+          productName: "Camiseta Tech Suport Preta",
           desc: "",
           price: 59.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/221152188/camisa-tech-support-definition-preta-3a35729c.png",
           discount: 10,
         },
         {
           id: 5,
-          name: "Camiseta com Logo Minimalista",
+          productName: "Camiseta com Logo Minimalista",
           desc: "",
           price: 59.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/130221950/ac8fe9f499.jpg",
           discount: 20,
         },
         {
           id: 6,
-          name: "Camiseta T-Rex Game Preta",
+          productName: "Camiseta T-Rex Game Preta",
           desc: "",
           price: 99.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/102460820/c2d44fc0fe.jpg",
           discount: 15,
         },
         {
           id: 7,
-          name: "Camiseta CSS IS Awesome Preta",
+          productName: "Camiseta CSS IS Awesome Preta",
           desc: "",
           price: 59.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/153700878/02ad351fb7.jpg",
           discount: 20,
         },
         {
           id: 8,
-          name: "Camiseta PHP Preta",
+          productName: "Camiseta PHP Preta",
           desc: "",
           price: 99.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/242028720/camisa-php-tmdmqims7k.png",
           discount: 10,
         },
         {
           id: 9,
-          name: "Camiseta Resenha Dev Preta",
+          productName: "Camiseta Resenha Dev Preta",
           desc: "",
           price: 99.99,
-          image:
+          src:
             "https://cdn.awsli.com.br/600x450/608/608801/produto/158137472/93b0f45c77.jpg",
           discount: 10,
         },
@@ -112,82 +110,82 @@ export const Item = () => {
       json = [
         {
           id: 1,
-          name: "Moletom Dev Frontend Preto",
+          productName: "Moletom Dev Frontend Preto",
           desc: "",
           price: 179.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379334.png",
           discount: 10,
         },
         {
           id: 2,
-          name: "Moletom Python Preto",
+          productName: "Moletom Python Preto",
           desc: "",
           price: 199.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379387.png",
           discount: 10,
         },
         {
           id: 13,
-          name: "Moletom Github Preto",
+          productName: "Moletom Github Preto",
           desc: "",
           price: 149.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379222.png",
           discount: 5,
         },
         {
           id: 4,
-          name: "Moletom Dev Backend Preto",
+          productName: "Moletom Dev Backend Preto",
           desc: "",
           price: 159.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379425.png",
           discount: 10,
         },
         {
           id: 5,
-          name: "Moletom Linux Branco",
+          productName: "Moletom Linux Branco",
           desc: "",
           price: 129.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Branco_1379295.png",
           discount: 30,
         },
         {
           id: 6,
-          name: "Moletom VSCode Preto",
+          productName: "Moletom VSCode Preto",
           desc: "",
           price: 119.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379408.png",
           discount: 40,
         },
         {
           id: 7,
-          name: "Moletom Acessa o GitHub Preto",
+          productName: "Moletom Acessa o GitHub Preto",
           desc: "",
           price: 99.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379175.png",
           discount: 50,
         },
         {
           id: 8,
-          name: "Moletom Rotina Dev Preto",
+          productName: "Moletom Rotina Dev Preto",
           desc: "",
           price: 149.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Preto_1379217.png",
           discount: 20,
         },
         {
           id: 9,
-          name: "Moletom Node.js Branco",
+          productName: "Moletom Node.js Branco",
           desc: "",
           price: 149.99,
-          image:
+          src:
             "https://montink.s3.amazonaws.com/mockups/226692/Branco_1379352.png",
           discount: 20,
         },
@@ -200,29 +198,29 @@ export const Item = () => {
       json = [
         {
           id: 1,
-          name: "T-Shirt Basic - Branca",
           desc: "",
-          price: 150.00,
-          image: `${i1}`,
+          productName: "T-Shirt Basic - Branca",
+          price: 150.0,
+          src: "https://i.imgur.com/uIeujfv.png",
           discount: "",
-        },  {
+        },
+        {
           id: 2,
-          name: "T-Shirt Basic - Cinza",
           desc: "",
-          price: 120.00,
-          image: `${i2}`,
+          productName: "T-Shirt Basic - Cinza",
+          price: 150.0,
+          src: "https://i.imgur.com/VOZ1G97.png",
           discount: "",
         },
         {
           id: 3,
-          name: "T-Shirt Basic - Vermelha",
           desc: "",
-          price: 120.00,
-          image: `${i3}`,
+          productName: "T-Shirt Basic - Vermelha",
+          price: 150.0,
+          src: "https://i.imgur.com/1nkQgd4.png",
           discount: "",
         },
       ]
-
     }
     setProducts(json);
     carregarProduto(json);
@@ -246,13 +244,13 @@ export const Item = () => {
           <C.SideLeft>
             <Zoom>
               <img 
-                src={item.image} 
-                alt={item.name} 
+                src={item.src} 
+                alt={item.productName} 
                 />
             </Zoom>
           </C.SideLeft>
           <C.SideRight>
-            <h1>{item.name}</h1>
+            <h1>{item.productName}</h1>
             <p>{item.desc}</p>
             <h3>
               {(item.price + 0).toLocaleString("pt-BR", {
