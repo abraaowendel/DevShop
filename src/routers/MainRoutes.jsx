@@ -10,6 +10,8 @@ import Hoodies from "../pages/Hoodies";
 import Item from "../components/item";
 import Reset from "../pages/Reset";
 import Profile from "../pages/Profile";
+import ChangePassword from "../pages/ChangePassword";
+import Address from "../pages/Address";
 
 const MainRoutes = () => {
   return (
@@ -20,6 +22,8 @@ const MainRoutes = () => {
       <Route path="/signup" element={<Register />} />
       <Route path="/reset" element={<Reset />} />
       <Route path="/account/profile" element={<Profile />} />
+      <Route path="/account/change-password" element={<ChangePassword />} />
+      <Route path="/account/address" element={<Address />} />
       <Route path="/camisas" element={<Shirts />} />
       <Route path="/moletons" element={<Hoodies />} />
       <Route path="/bermudas" element={<Shorts />} />

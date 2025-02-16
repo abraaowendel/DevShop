@@ -30,5 +30,10 @@ export const Cards = styled.div`
   img{
     height: 350px !important;
   }
+  @media (max-width: 390px) {
+    img{
+    height: 300px !important;
+  }
+  }
 `;
 

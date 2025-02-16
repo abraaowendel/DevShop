@@ -3,6 +3,7 @@ import { Menu } from "../../components/menu";
 import * as C from "./styled";
 
 const Profile = () => {
+
   const [profile, setProfile] = useState({
     id: "",
     fullName: "Perfil de testes",
@@ -20,12 +21,13 @@ const Profile = () => {
       [name]: value, // Atualiza apenas a propriedade correspondente ao campo alterado
     }));
   };
+  
   return (
     <C.Container>
       <Menu />
       <C.SideRight>
         <h1>Meu perfil</h1>
-        <p>Gerenciar e proteger sua contas</p>
+        <p>Gerenciar e proteger sua conta</p>
         <form action="">
           <label htmlFor="fullName">Nome Completo</label>
           <input

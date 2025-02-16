@@ -14,7 +14,7 @@ const Home = () => {
       desc: "",
       productName: "T-Shirt Basic - Branca",
       price: 150.0,
-      src: "https://i.imgur.com/uIeujfv.png",
+      src: "https://i.imgur.com/ITKO9Es.png",
       discount: "",
     },
     {
@@ -22,7 +22,7 @@ const Home = () => {
       desc: "",
       productName: "T-Shirt Basic - Cinza",
       price: 150.0,
-      src: "https://i.imgur.com/VOZ1G97.png",
+      src: "https://i.imgur.com/uId0yJv.png",
       discount: "",
     },
     {
@@ -30,7 +30,7 @@ const Home = () => {
       desc: "",
       productName: "T-Shirt Basic - Vermelha",
       price: 150.0,
-      src: "https://i.imgur.com/1nkQgd4.png",
+      src: "https://i.imgur.com/mLFFTO0.png",
       discount: "",
     },
   ]);

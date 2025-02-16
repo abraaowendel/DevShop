@@ -7,7 +7,7 @@ export const Container = styled.div`
   min-height: calc(100vh - 300px);
   font-family: "Inter", "Arial";
   padding:60px 0 80px;
-
+  overflow-x: hidden;
   @media (max-width: 768px) {
     padding:10px 0 40px;
   }
@@ -34,12 +34,12 @@ export const SideLeft = styled.div`
     width: auto;
     padding: 0 20px;
     img {
-      height: 350px;
+      height: 400px;
     }
   }
   @media (max-width: 590px) {
     img {
-      height: 250px;
+      height: 300px;
     }
   }
 `;

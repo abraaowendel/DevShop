@@ -69,7 +69,7 @@ export const ProductLink = styled(Link)`
       text-align: center;
     }
     img {
-      height: 280px;
+      height: 300px;
     }
   }
   @media (max-width: 590px) {
@@ -79,7 +79,7 @@ export const ProductLink = styled(Link)`
       font-size: 1em;
     }
     img{
-      height: 220px;
+      height: 250px;
     }
   }
 `

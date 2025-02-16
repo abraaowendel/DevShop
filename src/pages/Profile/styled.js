@@ -51,7 +51,7 @@ export const SideRight = styled.div`
       display: flex;
       justify-content: center;
       margin: 10px 0;
-      width: 120px;
+      max-width: 180px;
       background: #000;
       color: #fff;
       border: none;

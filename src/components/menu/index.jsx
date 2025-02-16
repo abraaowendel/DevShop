@@ -16,11 +16,11 @@ export const Menu = () => {
           <RiShoppingBagFill fontSize={18} />
           <p>Meus Pedidos</p>
         </a>
-        <a href="/account/addresses">
+        <a href="/account/address">
           <BsHouseGearFill fontSize={18} />
           <p>Endereços</p>
         </a>
-        <a href="/account/changePassword">
+        <a href="/account/change-password">
           <FaExchangeAlt fontSize={18} />
           <p>Trocar Senha</p>
         </a>
