@@ -21,7 +21,7 @@ const ChangePassword = () => {
                 <form action={handleSubmit}>
                   <label htmlFor="password">Senha atual</label>
                   <input
-                    type="text"
+                    type="password"
                     id="password"
                     name="password"
                     value={password}
@@ -29,7 +29,7 @@ const ChangePassword = () => {
                   />  
                   <label htmlFor="newPassword">Nova Senha</label>
                   <input
-                    type="text"
+                    type="password"
                     id="newPassword"
                     name="newPassword"
                     value={newPassword}
@@ -37,7 +37,7 @@ const ChangePassword = () => {
                   />  
                   <label htmlFor="confirmPassword">Confirmar Senha</label>
                   <input
-                    type="text"
+                    type="password"
                     id="confirmPassword"
                     name="confirmPassword"
                     value={confirmPassword}

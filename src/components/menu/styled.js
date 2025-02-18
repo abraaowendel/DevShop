@@ -2,15 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   font-family: "Inter", sans-serif;
-  display: flex;
-  align-items: start;
   height: calc(100vh - 184px);
-  min-width: 40%;
+  min-width: 25%;
 `;
 export const SideLeft = styled.div`
     display: flex;
     flex-direction: column;
-    padding:0 30px;
+    align-items: start;
+    padding-right: 30px;
     a{
         font-size: 18px;
         color: #000;
