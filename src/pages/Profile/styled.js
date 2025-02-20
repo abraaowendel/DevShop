@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position:relative ;
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: space-between;
@@ -66,10 +67,31 @@ export const SideRight = styled.div`
     }
   }
 `;
-
+export const SideRightTop = styled.div`
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  p {
+    border: 0;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    &:hover{
+      opacity:.9;
+    }
+  }
+`;
 export const Addresses = styled.div`
   padding-top: 8px;
-    b {
+  b {
     color: #000;
     font-size: 16px;
   }
@@ -87,8 +109,7 @@ export const ItemAddress = styled.div`
   padding: 10px 0 30px;
   margin-bottom: 15px;
 `;
-export const ItemAddressLeft = styled.div`
-`;
+export const ItemAddressLeft = styled.div``;
 export const ItemAddressTop = styled.div`
   margin-bottom: 5px;
 `;
@@ -99,22 +120,34 @@ export const Options = styled.div`
   justify-content: center;
   align-items: end;
   flex-direction: column;
-  button{
+  button {
     border: 1px solid #ccc;
     font-size: 14px;
     padding: 5px;
     cursor: pointer;
-    &:hover{
-      opacity: .8;
+    &:hover {
+      opacity: 0.8;
     }
   }
 `;
 export const OptionsTop = styled.div`
-  button{
-    color: #0088FF;
+  button {
+    color: #0088ff;
     font-weight: 600;
     background-color: transparent;
     border: none;
     margin: 10px 0 10px 5px;
   }
-`
+`;
+
+export const ItemDefault = styled.div`
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 3px;
+  width: 60px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+`;
